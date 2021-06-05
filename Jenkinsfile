@@ -3,9 +3,9 @@ pipeline {
 
     stages {
       // Upgrade helm chart
-      stage('Upgrade helm') {
+      stage('Chart check') {
         steps {
-          sh 'helm upgrade simple-web ./simple-web/'
+          sh 'helm lint ./simple-web'
         }
       }
     }
