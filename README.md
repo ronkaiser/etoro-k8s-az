@@ -17,7 +17,7 @@ Registry: acrinterview.azurecr.io
 
 ## Preperation
 - Download SSH key, change permissions and connect to Linux VM
-- Connect to VM and install `Azure CLI`, `kubectl` and `helm`
+- Connect to VM and install `Azure CLI`, `kubectl`, `helm` and `jenkins`
 
 ## Ingress nginx controller installation
 - Login to Azure cloud by **managed identity**  
@@ -46,13 +46,14 @@ Registry: acrinterview.azurecr.io
   `helm install simple-web ./simple-web/`  
 
 
+### Useful commands:
+**autoscaling check**  
+`kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://[ip]; done"`  
 
+**helm install**  
+`helm install simple-web ./simple-web/`
 
-autoscaling check
-kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://[ip]; done"
+**delete helm**  
+`helm delete simple-web`
 
-delete helm
-helm delete simple-web
-
-
-pathType: ImplementationSpecific
+### Jenkins  
