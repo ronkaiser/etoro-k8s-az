@@ -2,8 +2,16 @@ pipeline {
   agent any
 
     stages {
-      // Upgrade helm chart
+
+      // Check chart syntax
       stage('Chart check') {
+        steps {
+          sh 'helm lint ./simple-web'
+        }
+      }
+
+      // Upgrade helm chart
+      stage('Chart upgrade') {
         steps {
           sh 'helm lint ./simple-web'
         }

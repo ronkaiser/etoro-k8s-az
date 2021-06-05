@@ -53,6 +53,9 @@ Registry: acrinterview.azurecr.io
 **helm install**  
 `helm install simple-web ./simple-web/`
 
+**helm upgrade**  
+`helm upgrade simple-web ./simple-web/`
+
 **delete helm**  
 `helm delete simple-web`
 
