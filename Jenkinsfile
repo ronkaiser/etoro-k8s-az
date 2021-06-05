@@ -5,7 +5,7 @@ pipeline {
       // Upgrade helm chart
       stage('Upgrade helm') {
         steps {
-          sh 'echo "Test"'
+          sh 'helm upgrade ./simple-web/ simple-web'
         }
       }
     }
