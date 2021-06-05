@@ -1,10 +1,12 @@
 pipeline {
   agent any
 
-    // Upgrade helm chart
-    stage('Upgrade helm') {
-      steps {
-        sh 'echo "Test"'
+    stages {
+      // Upgrade helm chart
+      stage('Upgrade helm') {
+        steps {
+          sh 'echo "Test"'
+        }
       }
     }
   }
