@@ -15,7 +15,7 @@ Resource group: devops-interview-rg
 Image: simple-web  
 Registry: acrinterview.azurecr.io
 
-## Preperation
+## Preparation
 - Download SSH key, change permissions and connect to Linux VM
 - Connect to VM and install `Azure CLI`, `kubectl`, `helm` and `jenkins`
 
