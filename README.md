@@ -59,16 +59,13 @@ Registry: acrinterview.azurecr.io
 **delete helm**  
 `helm delete simple-web`
 
-## Jenkins  
-- switch user to jenkins in order to create kube config for jenkins user so we will be able to upgrade our helm chart:    
+## Jenkins Pipeline
+The pipeline doing the following:  
+- verify helm chart syntax using lint command  
+- Authenticate with Azure and AKS cluster by running the following commands:  
   ```
-  sudo -i  
-  su - jenkins  
   az login --identity  
   az aks get-credentials --resource-group devops-interview-rg --name ron-interview-aks --admin  
   ```
-### Pipeline  
-The pipeline doing the following:  
-- verify helm chart syntax using lint command  
 - perform upgrade to helm chart by increase revision number after making changes in chart  
 - we can also change app version by edit `Chart.yaml`  
