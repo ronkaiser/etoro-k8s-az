@@ -13,7 +13,7 @@ pipeline {
       // Upgrade helm chart
       stage('Chart upgrade') {
         steps {
-          sh 'helm lint ./simple-web'
+          sh 'helm upgrade simple-web ./simple-web/'
         }
       }
     }
