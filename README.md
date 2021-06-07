@@ -50,6 +50,9 @@ Registry: acrinterview.azurecr.io
 **autoscaling check**  
 `kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://[ip]; done"`  
 
+**verify deployment before install**  
+`helm install --dry-run --debug --generate-name ./simple-web/`  
+
 **helm install**  
 `helm install simple-web ./simple-web/`
 
