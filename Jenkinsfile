@@ -21,7 +21,8 @@ pipeline {
       // Verify helm installation
       stage('verify helm') {
         steps {
-          sh '.install_helm.sh'
+          sh 'chmod 700 ./install_helm.sh'
+          sh './install_helm.sh'
         }
       }
 
