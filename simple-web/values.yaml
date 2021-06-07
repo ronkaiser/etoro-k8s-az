@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: yeasy/simple-web
+  repository: acrinterview.azurecr.io/simple-web
   pullPolicy: IfNotPresent
   tag: "latest"
 
