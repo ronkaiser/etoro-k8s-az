@@ -73,6 +73,7 @@ The pipeline doing the following:
   ```
   az login --identity  
   az aks get-credentials --resource-group devops-interview-rg --name ron-interview-aks --admin  
-  ```
+  ```  
+- verify helm installation using sh script  
 - perform upgrade to helm chart by increase revision number after making changes in chart  
 - we can also change app version by edit `Chart.yaml`  
