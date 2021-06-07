@@ -18,6 +18,13 @@ pipeline {
         }
       }
 
+      // Verify helm installation
+      stage('verify helm') {
+        steps {
+          sh '.install_helm.sh'
+        }
+      }
+
       // Upgrade helm chart
       stage('Chart upgrade') {
         steps {

@@ -45,6 +45,10 @@ Registry: acrinterview.azurecr.io
 - Deploy the chart by the following command:  
   `helm install simple-web ./simple-web/`  
 
+### Clean chart  
+- edit `values.yaml` - remove comments and serviceAccount component  
+- remove serviceAccount method from `_helpers.tpl`  
+- remove serviceAccount call from `deployment.yaml` template  
 
 ### Useful commands:
 **autoscaling check**  
